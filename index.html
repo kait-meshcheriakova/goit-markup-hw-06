@@ -417,18 +417,51 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form">
+          <p class="title-media">Subscribe</p>
+          <form class="input-position">
+            <input type="email" class="footer-input"  name="user-email" placeholder="E-mail">
+            <button type="submit" class="footer-btn">Subscribe <svg width="20" height="20"><use href=""></use></svg>
+            </button>
+          </form>
+        </div>
       </div>
    
     </footer>
 
     <!----------Modal window ----------->
-
+   
     <div class="bacdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
         <svg class="modal-close-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close-black"></use></svg>
         </button>
+        <p class="form-title">Leave your contacts and we will call you back</p>
+        <form class="form">
+          <label for="user-name">Name</label>
+          <div>
+          <input type="text" class="form-input" name="user-name" id="user-name">
+          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-name"></use></svg></div>
+          <label for="user-tel">Phone</label>
+          <div>
+          <input type="tel" class="form-input"name="user-tel" id="user-tel">
+          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-phone"></use></svg></div>
+         <label for="user-email">Email</label>
+          <div>
+          <input type="email" class="form-input"  name="user-email" id="user-email">
+          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-mail"></use></svg></div>
+          <label for="user-coment">Comment</label>
+          <textarea name="user-coment" placeholder="Text input" class="coment-form" id="user-coment"></textarea>
+          <label for="">
+           <input type="checkbox" name="modal-agreement" />
+           <span>I accept the terms and conditions of the <a href="Privacy Policy">Privacy Policy</a></span>
+          </label>
+          <button type="submit" class="form-btn">Send</button>
+        
+        </form>
+
+
       </div>
     </div>
     <script src="./js/modal.js"></script>
