@@ -421,7 +421,7 @@
           <p class="title-media">Subscribe</p>
           <form class="input-position">
             <input type="email" class="footer-input"  name="user-email" placeholder="E-mail">
-            <button type="submit" class="footer-btn">Subscribe <svg width="20" height="20"><use href=""></use></svg>
+            <button type="submit" class="footer-btn">Subscribe <svg width="20" height="20"><use href="./images/icons.svg#icon-airplane"></use></svg>
             </button>
           </form>
         </div>
@@ -439,23 +439,23 @@
         </button>
         <p class="form-title">Leave your contacts and we will call you back</p>
         <form class="form">
-          <label for="user-name">Name</label>
-          <div>
-          <input type="text" class="form-input" name="user-name" id="user-name">
-          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-name"></use></svg></div>
-          <label for="user-tel">Phone</label>
-          <div>
-          <input type="tel" class="form-input"name="user-tel" id="user-tel">
-          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-phone"></use></svg></div>
-         <label for="user-email">Email</label>
-          <div>
-          <input type="email" class="form-input"  name="user-email" id="user-email">
-          <svg class="form-icon" width="24" height="18"><use href="./images/icons.svg#icon-mail"></use></svg></div>
-          <label for="user-coment">Comment</label>
-          <textarea name="user-coment" placeholder="Text input" class="coment-form" id="user-coment"></textarea>
-          <label for="">
-           <input type="checkbox" name="modal-agreement" />
-           <span>I accept the terms and conditions of the <a href="Privacy Policy">Privacy Policy</a></span>
+          <label class="modal-label"><span clas="title-input">Name</span>
+            <span class="wrap-input-form"><input type="text" class="form-input" name="user-name" required pattern="^[a-zA-Zа-яА-Я-і-І-ї-Ї]+$">
+            <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-name"></use></svg></span> 
+          </label>
+          <label class="modal-label"><span clas="title-input">Phone</span>
+            <span class="wrap-input-form"><input type="tel" class="form-input" name="user-tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx">
+            <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-phone"></use></svg></span> 
+          </label>
+          <label class="modal-label"><span clas="title-input">Email</span>
+            <span class="wrap-input-form"><input type="email" class="form-input" name="user-email">
+            <svg class="form-icon" width="18" height="24"><use href="./images/icons.svg#icon-mail"></use></svg></span> 
+          </label>
+          <label class="modal-label"><span clas="title-input">Comment</span>
+            <textarea name="user-coment" placeholder="Text input" class="coment-form"></textarea>
+          </label>
+            <input type="checkbox" name="user-agreement" id="user-agreement"/><svg class="icon-checkbox"width="16" height="16"><use href="./images/icons.svg#icon-checkbox"></use></svg>
+          <label for="user-agreement"><span>I accept the terms and conditions of the<a href="">Privacy Policy</a></span>
           </label>
           <button type="submit" class="form-btn">Send</button>
         
