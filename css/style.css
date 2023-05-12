@@ -196,7 +196,7 @@ body{color:#434455;
     
     }
 
-.btn{ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+.btn{ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     display: block;
     border-radius: 4px;
     min-width: 169px;
@@ -520,6 +520,8 @@ margin-right: 120px;}
     margin-left: 80px;
 }
 .footer-input{
+   transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
     padding-left:16px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -529,6 +531,7 @@ margin-right: 120px;}
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
+.footer-input:focus{border-color:#31d0aa;}
 
 .footer-btn{width: 165px;
     height: 40px;
@@ -553,11 +556,16 @@ margin-right: 120px;}
     align-items: center;
     gap: 16px;
     fill: var(--color-white);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-position{ display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;}
+.footer-btn:hover,
+.footer-btn:focus{background-color:var(--color-green);}
+
+
 /* ==========Modal window============ */
 
 .bacdrop{
@@ -627,6 +635,7 @@ margin-right: 120px;}
 }
 
 /* ========FORMS========= */
+
 .form{
     display: flex;
     flex-direction: column;
@@ -643,6 +652,8 @@ margin-right: 120px;}
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
+    align-items: center;
+    text-align: center;
     color: #2E2F42;}
    
 
@@ -654,7 +665,7 @@ margin-right: 120px;}
     line-height: 14px;
     letter-spacing: 0.04em;
     color: #8E8F99;
-    padding-left: 24px;
+    
 }
 .wrap-input-form{
     position: relative;
@@ -680,6 +691,7 @@ margin-right: 120px;}
 }
 .form-input:focus + .form-icon{fill: var(--color-iris);}
 .coment-form{display: flex;
+    margin-bottom: 16px;
     box-sizing: border-box;
     width: 360px;
     padding: 8px 16px;
@@ -689,12 +701,73 @@ margin-right: 120px;}
     resize: none;
     transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 }
+.coment-form::placeholder{font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);}
 .coment-form:focus{
     border-color:var(--color-iris);
     outline: none;
 }
 
+.modal-chekbox{ display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 24px;
+    width: 360px;
+    height: 16px;
+    gap: 8px;
+    cursor: pointer;
+}
+.fake-chekbox{ display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-checkbox{opacity: 0;
+    transition: opacity 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-agreement:focus + .fake-chekbox{
+  border: 1px solid #404BBF;
+}
+.user-agreement:checked + .fake-chekbox{
+    background-color:#4D5AE5;}
+.user-agreement:checked .icon-checkbox{
+    opacity: 1;
+    fill: var(--color-white);
+}
+.user-agreement:checked + .fake-chekbox .icon-checkbox{opacity: 1;
+    fill: var(--color-white);
+}
+.user-agreement-text{display: inline-flex;
+    width: 338px;
+    height: 16px;
+    font-family: var(--primery-text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    align-items: center;
+    order: 1;
+    flex-grow: 0; 
+    text-align: center;
+}
+
 .form-btn{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     font-family:var(--primery-text);
     font-style: normal;
     font-weight: 500;
@@ -703,18 +776,20 @@ margin-right: 120px;}
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     letter-spacing: 0.04em;
     color: #FFFFFF;
     background: #4D5AE5;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    width: 169px;
+    height: 56px;
+    padding: 0;
     border-radius: 4px;
     margin-right: auto;
     margin-left: auto;
+    cursor: pointer;
 }
-.icon-checkbox{
-    fill: #4D5AE5;
-    background-color: #8e8f99;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 2px;
-}
+.form-btn:hover,
+.form-btn:focus{background: #404BBF;}
+
