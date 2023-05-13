@@ -791,5 +791,8 @@ margin-right: 120px;}
     cursor: pointer;
 }
 .form-btn:hover,
-.form-btn:focus{background: #404BBF;}
+.form-btn:focus{background: #404BBF;
+    outline: none;
+
+}
 
